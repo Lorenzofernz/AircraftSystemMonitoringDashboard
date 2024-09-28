@@ -259,6 +259,13 @@
           </a>
         }
       </div>
+      <div *ngIf="aircraftData">
+        <h3>Aircraft System Status</h3>
+        <p><strong>Fuel Level:</strong> {{ aircraftData.fuelLevel | number:'1.0-2' }}%</p>
+        <p><strong>Engine Temperature:</strong> {{ aircraftData.engineTemp | number:'1.0-2' }} °C</p>
+        <p><strong>Altitude:</strong> {{ aircraftData.altitude | number:'1.0-2' }} ft</p>
+      </div>
+
       <div class="social-links">
         <a
           href="https://github.com/angular/angular"
